@@ -115,6 +115,7 @@ class ReceiptCreate(BaseModel):
     irt_amount: str
     reference_id: str
     phone_number: str
+    callback: str
 
 
 class VerifyReceipt(BaseModel):
@@ -124,19 +125,7 @@ class VerifyReceipt(BaseModel):
 
 class Receipt(BaseModel):
     model_config = ConfigDict(extra="ignore")
-    id: int
-    user_phone: str
-    status: ReceiptStatus
-    tracking_code: Optional[str] = None
-    irt_amount: str
-    reference_id: str
-    currency: Optional[Currency] = None
-    network: Optional[Network] = None
-    amount: Optional[str] = None
-    paid_at: Optional[str] = None
-    created_at: Optional[str] = None
-    updated_at: Optional[str] = None
-    expire_at: Optional[str] = None
+    redirect_url: str
 
 
 class PaginatedReceiptList(BaseModel):

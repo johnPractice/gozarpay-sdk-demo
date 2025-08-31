@@ -10,10 +10,13 @@ class ReceiptService:
         self._router = router
 
     def create(
-        self, *, irt_amount: str, reference_id: str, phone_number: str
+        self, *, irt_amount: str, reference_id: str, phone_number: str, callback: str
     ) -> Receipt:
         payload = ReceiptCreate(
-            irt_amount=irt_amount, reference_id=reference_id, phone_number=phone_number
+            irt_amount=irt_amount,
+            reference_id=reference_id,
+            phone_number=phone_number,
+            callback=callback,
         ).model_dump()
         path = self._router.path("receipt.create")
         resp = self._request("POST", path, json=payload)
