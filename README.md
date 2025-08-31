@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/yourname/gozarpay-python-sdk">
+  <a href="#">
     <img src="https://gozarpay.com/fav-b.png
     " alt="GozarPay Logo" width="200"/>
   </a>
@@ -94,7 +94,7 @@ for r in client.receipt.iter_receipts():
     print(r.id, r.status)
 
 # Wallets by phone
-wallets = client.wallet.list_by_phone(phone="+989121234567", search="USDT")
+wallets = client.wallet.list_by_phone(phone="09121234567", search="USDT")
 print(wallets.count, len(wallets.results))
 ```
 
