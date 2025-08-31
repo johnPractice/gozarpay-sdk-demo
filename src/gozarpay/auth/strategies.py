@@ -93,8 +93,8 @@ class ApiKeyAuth(AuthStrategy):
                 f"Failed API login: {resp.status_code} {resp.text}"
             )
         data = resp.json()
-        access = data.get("access") or data.get("token")
-        refresh = data.get("refresh")
+        access = data.get("access_token") or data.get("token")
+        refresh = data.get("refresh_token")
         if not access or not refresh:
             raise AuthenticationError("Login response missing access/refresh tokens")
         self.access_token = access
