@@ -24,9 +24,9 @@ V1_SPEC = VersionSpec(
         # market
         "market.price_stats": "/tp/v1/mrt/markets/price-stats/",
         # receipts
-        "receipt.create": "/tp/v1/rpt/divar/create/",
-        "receipt.verify": "/tp/v1/rpt/divar/verify/",
-        "receipt.refund": "/tp/v1/rpt/divar/refund/",
+        "receipt.create": "/tp/v1/rpt/create/",
+        "receipt.verify": "/tp/v1/rpt/verify/",
+        "receipt.refund": "/tp/v1/rpt/refund/",
         "receipt.get": "/tp/v1/rpt/receipts/{id}/",
         "receipt.list": "/tp/v1/rpt/receipts/",
         # wallets
