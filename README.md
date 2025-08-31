@@ -1,7 +1,7 @@
 <p align="center">
   <a href="#">
-    <img src="https://gozarpay.com/fav-b.png
-    " alt="GozarPay Logo" width="200"/>
+    <img src="https://gozarpay.com/fav-b.png"
+     alt="GozarPay Logo" width="200"/>
   </a>
 </p>
 
