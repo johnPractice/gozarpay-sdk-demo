@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://github.com/yourname/gozarpay-python-sdk">
+    <img src="https://gozarpay.com/fav-b.png
+    " alt="GozarPay Logo" width="200"/>
+  </a>
+</p>
+
+<h1 align="center">GozarPay Python SDK</h1>
+
 Here’s a complete, copy-paste-ready **README.md** for your SDK.
 
 ---
@@ -69,13 +78,12 @@ for p in prices:
 # Authenticated endpoints (receipts)
 receipt = client.receipt.create(
     irt_amount="1000000.00",
-    phone_number="+989121234567",
+    phone_number="09121234567",
     reference_id="order-123",
+    callback="https:xyz.com"
 )
 print(receipt.id, receipt.status)
 
-# Fetch a receipt
-r = client.receipt.get(receipt_id=receipt.id)
 
 # Verify / Refund
 client.receipt.verify(reference_id="order-123")
